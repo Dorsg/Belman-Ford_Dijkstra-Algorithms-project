@@ -40,6 +40,7 @@ namespace graphEx {
         void removeFromList(Edge& dataToRemove);
         Node* findDataInList(Edge& dataToFind);
         const List& operator=(const List& Lst);
+        void DisplayList();
     };
 
 

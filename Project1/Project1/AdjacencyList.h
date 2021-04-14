@@ -16,8 +16,7 @@ namespace graphEx {
         List NeighborList(int vertex);
         void AddEdge(int vertex1, int vertex2, int weight);
         void DeleteEdge(int vertex1, int vertex2, int weight);
-
-
+        void DisplayGraph();
 
     };
 }

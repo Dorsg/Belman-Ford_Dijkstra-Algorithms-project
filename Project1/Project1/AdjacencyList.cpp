@@ -1,3 +1,6 @@
+#pragma once
+
+#include <iostream>
 #include "AdjacencyList.h"
 
 namespace graphEx {
@@ -5,7 +8,7 @@ namespace graphEx {
 
     AdjList::~AdjList() 
     {
-        delete adjList;        
+        delete[] adjList;        
     }
 
     void AdjList::MakeGraph(int _numberOfVertexes)
@@ -36,6 +39,16 @@ namespace graphEx {
                 adjList[i].removeFromList(toDelete);
                 break;
             }
+        }
+    }
+
+    void AdjList::DisplayGraph()
+    {
+        for (int i = 0; i < numberOfVertexes; i++)
+        {
+            cout << "vertex number " << i << " : ";
+            adjList[i].DisplayList();
+            cout << endl;
         }
     }
 
