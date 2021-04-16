@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include "AdjacencyList.h"
+#include "AdjacencyMatrix.h"
 #include "List.h"
 #include "Edge.h"
 
@@ -10,7 +11,7 @@ using namespace graphEx;
 
 void main(int argc, char** argv)
 {
-    ifstream input; 
+    /*ifstream input; 
     int numberOfVertexes, start, target; 
     int tempSource, tempDest, tempWeight;
     Edge tempEdge;
@@ -45,6 +46,11 @@ void main(int argc, char** argv)
     input.close();
     cout << "End-of-file reached.." << endl;
 
+	*/
+
+	AdjacencyMatrix adjacencyMatrix(10);
+
+	adjacencyMatrix.displayMatrix;
     
 }
 
