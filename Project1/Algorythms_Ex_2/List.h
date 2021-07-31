@@ -3,10 +3,10 @@
 using namespace std;
 
 namespace graphEx {
-    
+
     class Node {
         friend class List;
-        
+
     private:
         Edge data;
         Node* next;
@@ -39,8 +39,9 @@ namespace graphEx {
         bool isLstEmpty() const;
         void removeFromList(Edge& dataToRemove);
         Node* findDataInList(Edge& dataToFind);
-        const List& operator=(const List& Lst);
+        List& operator=(const List& Lst);
         void DisplayList();
+        void removeFromHead();
     };
 
 

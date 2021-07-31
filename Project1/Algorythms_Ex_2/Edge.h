@@ -3,7 +3,8 @@
 namespace graphEx {
 
     struct Edge {
-        int source, dest, weight;
+        int source, dest;
+        float weight;
     };
 
 }

@@ -17,12 +17,6 @@ namespace graphEx {
 
     List::List() : numberOfNeighbors(0), head(nullptr), tail(nullptr) {}
 
-    List::List(List& lst) {
-        head = lst.head;
-        tail = lst.tail;
-        numberOfNeighbors = lst.numberOfNeighbors;
-    }
-
     List::~List() {
         makeEmpty();
     }
@@ -57,13 +51,23 @@ namespace graphEx {
         return false;
     }
 
+    List::List(List& lst) : List() {
 
-    const List& List::operator=(const List& lst) {
+        *this = lst;
+    }
+
+    List& List::operator=(const List& lst) {
+
         if (this != &lst) {
-            head = lst.head;
-            tail = lst.tail;
             numberOfNeighbors = lst.numberOfNeighbors;
+
+            Node* temp =  lst.head;
+            while (temp) {
+                this->AddToLst(temp->data);
+                temp = temp->next;
+            }
         }
+
         return *this;
     }
 
@@ -85,6 +89,7 @@ namespace graphEx {
     }
 
     void List::removeFromList(Edge& dataToRemove) {
+
         Node* toRemove = findDataInList(dataToRemove);
         toRemove->prev = toRemove->next;
     }
@@ -98,6 +103,26 @@ namespace graphEx {
             temp = temp->next;
         }
         return nullptr;
+    }
+
+    void List::removeFromHead() {
+        if (head == nullptr)
+            return;
+        if (head->next == nullptr) {
+            delete head;
+            head = tail = nullptr;
+            
+            numberOfNeighbors = 0;
+
+            return;
+        }
+
+        Node* temp = head->next;
+        delete head;
+        head = temp;
+        head->prev = nullptr;
+        numberOfNeighbors--;
+      
     }
 
 }

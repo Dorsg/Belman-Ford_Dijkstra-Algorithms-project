@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f3de01db-8949-40de-906e-30f24cd25b3e}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{e55f1dc6-add9-4af6-868c-3725ff677dc7}</ProjectGuid>
+    <RootNamespace>AlgorythmsEx2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Algorythms_Ex_2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,15 +141,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AdjacencyList.cpp" />
+    <ClCompile Include="AdjacencyMatrix.cpp" />
+    <ClCompile Include="BelmanFord.cpp" />
+    <ClCompile Include="DeltaArray.cpp" />
+    <ClCompile Include="Dijkstra.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="List.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="PointedGraphMatrix.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MinHeap.cpp" />
+    <ClCompile Include="Queue_MinHeap.cpp" />
+    <ClCompile Include="Queue_Regular_Array.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdjacencyList.h" />
+    <ClInclude Include="AdjacencyMatrix.h" />
+    <ClInclude Include="BelmanFord.h" />
+    <ClInclude Include="DeltaArray.h" />
+    <ClInclude Include="Dijkstra.h" />
     <ClInclude Include="Edge.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="List.h" />
-    <ClInclude Include="PointedGraphMatrix.h" />
+    <ClInclude Include="MinHeap.h" />
+    <ClInclude Include="Queue_Base.h" />
+    <ClInclude Include="Queue_MinHeap.h" />
+    <ClInclude Include="Queue_Regular_Array.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
